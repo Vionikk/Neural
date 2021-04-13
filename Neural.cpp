@@ -11,7 +11,7 @@ double func(long double x[], long double y) {
 int main() {
     clock_t tStart = clock();
     long double t_in[3] = { 1, 1, 0 }, t_out = 1, w = -0.37543/*Случайные веса*/, out;
-    for (int i = 0; i < 1000000000; i++) {
+    for (int i = 0; i < 1000000000000000; i++) {
         out = sigmoid(func(t_in, w));
         w += func(t_in, (t_out - out) * out * (1 - out));
     }
