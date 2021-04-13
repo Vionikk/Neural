@@ -9,7 +9,9 @@ double func(long double x[], long double y) {
     return x[0] * y + x[1] * y + x[2] * y;
 }
 int main() {
-    long double t_in[3] = { 1, 1, 0 }, t_out = 1, w = -0.37543/*Случайные веса*/, out;
+    long double t_in1[3] = { 1, 1, 0 }, t_out1 = 1, w1 = -0.37543/*Случайные веса*/, out1;
+    long double t_in2[3] = { 0, 1, 0 }, t_out2 = 0, w2 = -0.37543/*Случайные веса*/, out2;
+    long double t_in3[3] = { 1, 1, 1 }, t_out3 = 1, w3 = -0.37543/*Случайные веса*/, out3;
     for (long i1 = 0; i1 < 10000000000000000000000000000000000000; i1++) {
         out1 = sigmoid(func(t_in, w));
         w1 += func(t_in, (t_out - out) * out * (1 - out));
