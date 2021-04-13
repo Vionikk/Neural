@@ -1,11 +1,12 @@
-#!/bin/bash                                                                                                                                          	ml icc
-	Echo “Optimization O1”
+#!/bin/bash  
+        ml icc
+	echo “Optimization O1”
 	icc -restrict -O1 Neural.cpp -o simp1 
 	time ./ Neural.cpp                                                                                                                 
-	Echo “Optimization O2”	
+	echo “Optimization O2”	
 	icc -restrict -O2 -qopt-report=2 -qopt-report-phase=vec -D NOALIAS Neural.cpp -o simpvec2     
 	time ./ Neural.cpp                                                         
-	Echo “Optimization O3”
+	echo “Optimization O3”
 	icc -restrict -O3 -qopt-report=3 -qopt-report-phase=vec -D NOALIAS Neural.cpp -o simpvec3
 	time ./ Neural.cpp
 		
