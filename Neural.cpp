@@ -10,9 +10,19 @@ double func(long double x[], long double y) {
 }
 int main() {
     long double t_in[3] = { 1, 1, 0 }, t_out = 1, w = -0.37543/*Случайные веса*/, out;
-    for (int i = 0; i < 100000000000000000000000000000000000; i++) {
-        out = sigmoid(func(t_in, w));
-        w += func(t_in, (t_out - out) * out * (1 - out));
+    for (long i1 = 0; i1 < 10000000000000000000000000000000000000; i1++) {
+        out1 = sigmoid(func(t_in, w));
+        w1 += func(t_in, (t_out - out) * out * (1 - out));
     }
-    std::cout << out << std::endl;
+    for (long i2 = 0; i2 < 10000000000000000000000000000000000000; i2++) {
+        out2 = sigmoid(func(t_in, w));
+        w2 += func(t_in, (t_out - out) * out * (1 - out));
+    }
+    for (long i3 = 0; i3 < 10000000000000000000000000000000000000; i3++) {
+        out3 = sigmoid(func(t_in, w));
+        w3 += func(t_in, (t_out - out) * out * (1 - out));
+    }
+    std::cout << out1 << std::endl;
+    std::cout << out2 << std::endl;
+    std::cout << out3 << std::endl;
 }
