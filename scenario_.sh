@@ -35,7 +35,7 @@ do
 icc -std=c++11 -x$flag -O2 Neural.cpp -o nexttest
 if [$? -eq 0]
 then
-echo "Extention: $flag"
+echo "Extention $flag"
 time ./nexttest
 echo -e "\n"
 fi
