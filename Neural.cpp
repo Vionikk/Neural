@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <time.h>
-
+//Vionikk
 double sigmoid(long double x) {
     return 1 / (1 + std::exp(-x));
 }
@@ -12,7 +12,7 @@ int main() {
     long double t_in1[3] = { 1, 1, 0 }, t_out1 = 1, w1 = -0.37543/*Случайные веса*/, out1;
     long double t_in2[3] = { 1, 1, 0 }, t_out2 = 1, w2 = -0.37543/*Случайные веса*/, out2;
     long double t_in3[3] = { 1, 1, 1 }, t_out3 = 1, w3 = -0.37543/*Случайные веса*/, out3;
-    for (long i1 = 0; i1 < 200000000; i1++) {
+    for (long i1 = 0; i1 < 100000000; i1++) {
         out1 = sigmoid(func(t_in1, w1));
         w1 += func(t_in1, (t_out1 - out1) * out1 * (1 - out1));
     }
