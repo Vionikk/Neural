@@ -221,7 +221,7 @@ int main() {
     //cout << "SORT ME LIKE YOU DO!" << endl;
     
     
-   int sz = 240000;
+   int sz = 21474642;
    int sirala[sz];
    for(int i=0;i<sz;i++)
       sirala[i]=rand()%165460;  //Generate number between 0 to 2147483645
@@ -236,9 +236,9 @@ int main() {
 
     //Sort Functions:
     selectionSort(sirala,sz);
-    //insertionSort(sirala,10);
-    //bubbleSort(sirala,10);
-    //shellSort(sirala,10);
+    insertionSort(sirala,sz);
+    bubbleSort(sirala,sz);
+    shellSort(sirala,sz);
     //mergeSort(sirala,0,9);
     //quickSort(sirala, 0, 9);
     //heapSort(sirala, 10);
