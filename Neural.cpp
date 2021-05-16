@@ -236,7 +236,7 @@ int main() {
    for(int i=0;i<sz2;i++)
       sirala2[i]=rand()%165420;  //Generate number between 0 to 2147483645
     
-   int sz3 = 274835;
+   int sz3 = 27835;
    int sirala3[sz3];
    for(int i=0;i<sz3;i++)
       sirala3[i]=rand()%165410;  //Generate number between 0 to 2147483645*/
@@ -246,17 +246,17 @@ int main() {
    for(int i=0;i<sz4;i++)
       sirala4[i]=rand()%145460;  //Generate number between 0 to 2147483645*/
     
-   int sz5 = 274835;
+   int sz5 = 24835;
    int sirala5[sz5];
    for(int i=0;i<sz5;i++)
       sirala5[i]=rand()%164460;  //Generate number between 0 to 2147483645*/
     
-   int sz6 = 274835;
+   int sz6 = 24835;
    int sirala6[sz6];
    for(int i=0;i<sz6;i++)
       sirala6[i]=rand()%165440;  //Generate number between 0 to 2147483645*/
     
-   int sz7 = 274835;
+   int sz7 = 27835;
    int sirala7[sz7];
    for(int i=0;i<sz7;i++)
       sirala7[i]=rand()%16546;  //Generate number between 0 to 2147483645*/
