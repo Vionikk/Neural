@@ -221,22 +221,22 @@ int main() {
     //cout << "SORT ME LIKE YOU DO!" << endl;
     
     
-   int sz = 2147483645;
+   int sz = 274835;
    int sirala[sz];
    for(int i=0;i<sz;i++)
       sirala[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   /*int sz1 = 2147483645;
+   int sz1 = 274835;
    int sirala1[sz1];
    for(int i=0;i<sz1;i++)
       sirala1[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   int sz2 = 2147483645;
+   int sz2 = 274835;
    int sirala2[sz2];
    for(int i=0;i<sz2;i++)
       sirala2[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   int sz3 = 2147483645;
+   int sz3 = 274835;
    int sirala3[sz3];
    for(int i=0;i<sz3;i++)
       sirala3[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
@@ -252,13 +252,13 @@ int main() {
     //int sz_1 = sz - 1;
     //Sort Functions:
     selectionSort(sirala,sz);
-    //insertionSort(sirala1,sz1);
-    //bubbleSort(sirala2,sz2);
-    //shellSort(sirala3,sz3);
-    //mergeSort(sirala,0,sz_1);
-    //quickSort(sirala, 0, sz_1);
-    //heapSort(sirala, sz);
-    //radixSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala,0,sz_1);
+    quickSort(sirala, 0, sz_1);
+    heapSort(sirala, sz);
+    radixSort(sirala,sz);
 
 
     //Print sorted arrays
