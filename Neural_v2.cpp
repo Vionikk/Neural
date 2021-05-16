@@ -4,8 +4,8 @@
 using namespace std;
 
 //Selection sort function
-void selectionSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSayisi) {
-    unsigned long long int	 i, j, enKucuk, temp;
+void selectionSort(int dizi[], int elemanSayisi) {
+    int i, j, enKucuk, temp;
     for (i = 0; i < elemanSayisi - 1; i++) {
         enKucuk = i;
         for (j = i + 1; j < elemanSayisi; j++) {
@@ -19,8 +19,8 @@ void selectionSort(unsigned long long int	 dizi[], unsigned long long int	 elema
 }
 
 //Insertion sort function
-void insertionSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSayisi) {
-    unsigned long long int	 i, j, temp;
+void insertionSort(int dizi[], int elemanSayisi) {
+    int i, j, temp;
     for (i = 1; i < elemanSayisi; i++) {
         j = i;
         while (j > 0 && dizi[j - 1] > dizi[j]) {
@@ -33,9 +33,9 @@ void insertionSort(unsigned long long int	 dizi[], unsigned long long int	 elema
 }
 
 //Bubble sort function
-void bubbleSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSayisi) {
-    unsigned long long int	 temp;
-    unsigned long long int	 i, j;
+void bubbleSort(int dizi[], int elemanSayisi) {
+    int temp;
+    int i, j;
 
     for (i = 1; i < elemanSayisi; i++) {
         for (j = 0; j < elemanSayisi - i; j++) {
@@ -49,11 +49,11 @@ void bubbleSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSa
 }
 
 //Shell sort function
-void shellSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSayisi) {
-    unsigned long long int	 j;
-    for (unsigned long long int	 gap = elemanSayisi / 2; gap > 0; gap /= 2) {
-        for (unsigned long long int	 i = gap; i < elemanSayisi; ++i) {
-            unsigned long long int	 temp = dizi[i];
+void shellSort(int dizi[], int elemanSayisi) {
+    int j;
+    for (int gap = elemanSayisi / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < elemanSayisi; ++i) {
+            int temp = dizi[i];
             for (j = i; j >= gap && temp < dizi[j - gap]; j -= gap) {
                 dizi[j] = dizi[j - gap];
             }
@@ -63,13 +63,13 @@ void shellSort(unsigned long long int	 dizi[], unsigned long long int	 elemanSay
 }
 
 //Merge sort functions
-void merge(unsigned long long int	 arr[], unsigned long long int	 l, unsigned long long int	 m, unsigned long long int	 r) {
-    unsigned long long int	 i, j, k;
-    unsigned long long int	 n1 = m - l + 1;
-    unsigned long long int	 n2 = r - m;
+void merge(int arr[], int l, int m, int r) {
+    int i, j, k;
+    int n1 = m - l + 1;
+    int n2 = r - m;
 
     /* create temp arrays */
-    unsigned long long int	 L[n1], R[n2];
+    int L[n1], R[n2];
 
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
@@ -77,7 +77,7 @@ void merge(unsigned long long int	 arr[], unsigned long long int	 l, unsigned lo
     for (j = 0; j < n2; j++)
         R[j] = arr[m + 1 + j];
 
-    /* Merge the temp arrays back unsigned long long int	o arr[l..r]*/
+    /* Merge the temp arrays back into arr[l..r]*/
     i = 0;
     j = 0;
     k = l;
@@ -110,9 +110,9 @@ void merge(unsigned long long int	 arr[], unsigned long long int	 l, unsigned lo
 
 /* l is for left index and r is right index of the sub-array
   of arr to be sorted */
-void mergeSort(unsigned long long int	 dizi[], unsigned long long int	 l, unsigned long long int	 r) {
+void mergeSort(int dizi[], int l, int r) {
     if (l < r) {
-        unsigned long long int	 m = l + (r - l) / 2; //Same as (l+r)/2, but avoids overflow for large l and h
+        int m = l + (r - l) / 2; //Same as (l+r)/2, but avoids overflow for large l and h
         mergeSort(dizi, l, m);
         mergeSort(dizi, m + 1, r);
         merge(dizi, l, m, r);
@@ -120,10 +120,10 @@ void mergeSort(unsigned long long int	 dizi[], unsigned long long int	 l, unsign
 }
 
 //Quick sort function
-void quickSort(unsigned long long int	 arr[], unsigned long long int	 left, unsigned long long int	 right) {
-    unsigned long long int	 i = left, j = right;
-    unsigned long long int	 tmp;
-    unsigned long long int	 pivot = arr[(left + right) / 2];
+void quickSort(int arr[], int left, int right) {
+    int i = left, j = right;
+    int tmp;
+    int pivot = arr[(left + right) / 2];
 
     /* partition */
     while (i <= j) {
@@ -148,15 +148,15 @@ void quickSort(unsigned long long int	 arr[], unsigned long long int	 left, unsi
 }
 
 //Heap sort function
-void swap(unsigned long long int	 a[], unsigned long long int	 *g, unsigned long long int	 *b) {
-    unsigned long long int	 temp;
+void swap(int a[], int *g, int *b) {
+    int temp;
     temp = a[*g];
     a[*g] = a[*b];
     a[*b] = temp;
 }
 
-void maxHeapify(unsigned long long int	 a[], unsigned long long int	 parent, unsigned long long int	 last) {
-    unsigned long long int	 child;
+void maxHeapify(int a[], int parent, int last) {
+    int child;
     child = 2 * parent;
     while (child <= last) {
         if ((child + 1 <= last) && (a[child + 1] > a[child]))
@@ -168,15 +168,15 @@ void maxHeapify(unsigned long long int	 a[], unsigned long long int	 parent, uns
     }
 }
 
-void buildHeap(unsigned long long int	 a[], unsigned long long int	 last) {
-    unsigned long long int	 i;
+void buildHeap(int a[], int last) {
+    int i;
     for (i = last / 2; i > 0; i--) {
         maxHeapify(a, i, last);
     }
 }
 
-void heapSort(unsigned long long int	 a[], unsigned long long int	 last) {
-    unsigned long long int	 l;
+void heapSort(int a[], int last) {
+    int l;
     l = 1;
     buildHeap(a, last);
     while (last > 1) {
@@ -187,17 +187,17 @@ void heapSort(unsigned long long int	 a[], unsigned long long int	 last) {
 }
 
 //Radix sort function
-unsigned long long int	 getMax(unsigned long long int	 arr[], unsigned long long int	 n) {
-    unsigned long long int	 max = arr[0];
-    for (unsigned long long int	 i = 1; i < n; i++)
+int getMax(int arr[], int n) {
+    int max = arr[0];
+    for (int i = 1; i < n; i++)
         if (arr[i] > max)
             max = arr[i];
     return max;
 }
 
-void countSort(unsigned long long int	 arr[], unsigned long long int	 n, unsigned long long int	 exp) {
-    unsigned long long int	 output[n];
-    unsigned long long int	 i, count[10] = {0};
+void countSort(int arr[], int n, int exp) {
+    int output[n];
+    int i, count[10] = {0};
     for (i = 0; i < n; i++)
         count[(arr[i] / exp) % 10]++;
     for (i = 1; i < 10; i++)
@@ -210,59 +210,156 @@ void countSort(unsigned long long int	 arr[], unsigned long long int	 n, unsigne
         arr[i] = output[i];
 }
 
-void radixSort(unsigned long long int	 arr[], unsigned long long int	 n) {
-    unsigned long long int	 m = getMax(arr, n);
-    for (unsigned long long int	 exp = 1; m / exp > 0; exp *= 10)
+void radixSort(int arr[], int n) {
+    int m = getMax(arr, n);
+    for (int exp = 1; m / exp > 0; exp *= 10)
         countSort(arr, n, exp);
 }
 
-unsigned long long int main() {
+int main() {
     //Create Dummy Array!!!
     //cout << "SORT ME LIKE YOU DO!" << endl;
     
     
-   unsigned long long int	 sz = 274835456456;
-   unsigned long long int	 sirala[sz];
-   for(unsigned long long int	 i=0;i<sz;i++)
+   int sz = 274835;
+   int sirala[sz];
+   for(int i=0;i<sz;i++)
       sirala[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   unsigned long long int	 sz1 = 274835345345;
-   unsigned long long int	 sirala1[sz1];
-   for(unsigned long long int	 i=0;i<sz1;i++)
+   int sz1 = 274835;
+   int sirala1[sz1];
+   for(int i=0;i<sz1;i++)
       sirala1[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   unsigned long long int	 sz2 = 27483521312;
-   unsigned long long int	 sirala2[sz2];
-   for(unsigned long long int	 i=0;i<sz2;i++)
-      sirala2[i]=rand()%165460;  //Generate number between 0 to 2147483645
+   int sz2 = 274835;
+   int sirala2[sz2];
+   for(int i=0;i<sz2;i++)
+      sirala2[i]=rand()%165420;  //Generate number between 0 to 2147483645
     
-   unsigned long long int	 sz3 = 27483123125;
-   unsigned long long int	 sirala3[sz3];
-   for(unsigned long long int	 i=0;i<sz3;i++)
-      sirala3[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
+   int sz3 = 27835;
+   int sirala3[sz3];
+   for(int i=0;i<sz3;i++)
+      sirala3[i]=rand()%165410;  //Generate number between 0 to 2147483645*/
+    
+   int sz4 = 274835;
+   int sirala4[sz4];
+   for(int i=0;i<sz4;i++)
+      sirala4[i]=rand()%145460;  //Generate number between 0 to 2147483645*/
+    
+   int sz5 = 24835;
+   int sirala5[sz5];
+   for(int i=0;i<sz5;i++)
+      sirala5[i]=rand()%164460;  //Generate number between 0 to 2147483645*/
+    
+   int sz6 = 24835;
+   int sirala6[sz6];
+   for(int i=0;i<sz6;i++)
+      sirala6[i]=rand()%165440;  //Generate number between 0 to 2147483645*/
+    
+   int sz7 = 27835;
+   int sirala7[sz7];
+   for(int i=0;i<sz7;i++)
+      sirala7[i]=rand()%16546;  //Generate number between 0 to 2147483645*/
 
-    //Prunsigned long long int	 Dummy Array!
-    /*for (unsigned long long int	 k = 0; k < sz; ++k) {
+    //Print Dummy Array!
+    /*for (int k = 0; k < sz; ++k) {
         cout << sirala[k] << " ";
     }
     cout << "\n";*/
 
 
 
-    unsigned long long int	 sz_1 = sz - 1;
+    int sz_1 = sz - 1;
     //Sort Functions:
     selectionSort(sirala,sz);
     insertionSort(sirala1,sz1);
     bubbleSort(sirala2,sz2);
     shellSort(sirala3,sz3);
-    mergeSort(sirala,0,sz_1);
-    quickSort(sirala, 0, sz_1);
-    heapSort(sirala, sz);
-    radixSort(sirala,sz);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
+    
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
+
+       int sq = 274835;
+   int terra[sq];
+   for(int i=0;i<sq;i++)
+      terra[i]=rand()%165460;  //Generate number between 0 to 2147483645
+    
+   int sq1 = 274835;
+   int terra1[sq1];
+   for(int i=0;i<sq1;i++)
+      terra1[i]=rand()%165460;  //Generate number between 0 to 2147483645
+    
+   int sq2 = 274835;
+   int terra2[sq2];
+   for(int i=0;i<sq2;i++)
+      terra2[i]=rand()%165420;  //Generate number between 0 to 2147483645
+    
+   int sq3 = 27835;
+   int terra3[sq3];
+   for(int i=0;i<sq3;i++)
+      terra3[i]=rand()%165410;  //Generate number between 0 to 2147483645*/
+    
+   int sq4 = 274835;
+   int terra4[sq4];
+   for(int i=0;i<sq4;i++)
+      terra4[i]=rand()%145460;  //Generate number between 0 to 2147483645*/
+    
+   int sq5 = 24835;
+   int terra5[sq5];
+   for(int i=0;i<sq5;i++)
+      terra5[i]=rand()%164460;  //Generate number between 0 to 2147483645*/
+    
+   int sq6 = 24835;
+   int terra6[sq6];
+   for(int i=0;i<sq6;i++)
+      terra6[i]=rand()%165440;  //Generate number between 0 to 2147483645*/
+    
+   int sq7 = 27835;
+   int terra7[sq7];
+   for(int i=0;i<sq7;i++)
+      terra7[i]=rand()%16546;  //Generate number between 0 to 2147483645*/
+
+    //Print Dummy Array!
+    /*for (int k = 0; k < sq; ++k) {
+        cout << terra[k] << " ";
+    }
+    cout << "\n";*/
 
 
-    //Prunsigned long long int	 sorted arrays
-    /*for (unsigned long long int	 j = 0; j < sz; ++j) {
+
+    int sq_1 = sq - 1;
+    //Sort Functions:
+    selectionSort(terra,sq);
+    insertionSort(terra1,sq1);
+    bubbleSort(terra2,sq2);
+    shellSort(terra3,sq3);
+    mergeSort(terra4,0,sq_1);
+    quickSort(terra5, 0, sq_1);
+    heapSort(terra6, sq6);
+    radixSort(terra7,sq7);
+
+    selectionSort(terra,sq);
+    insertionSort(terra1,sq1);
+    bubbleSort(terra2,sq2);
+    shellSort(terra3,sq3);
+    mergeSort(terra4,0,sq_1);
+    quickSort(terra5, 0, sq_1);
+    heapSort(terra6, sq6);
+    radixSort(terra7,sq7);
+
+    
+    //Print sorted arrays
+    /*for (int j = 0; j < sz; ++j) {
         cout << sirala[j] << " ";
     }*/
 
