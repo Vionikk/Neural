@@ -234,15 +234,16 @@ int main() {
 
 
 
+    int sz1 = sz - 1;
     //Sort Functions:
     selectionSort(sirala,sz);
-    //insertionSort(sirala,sz);
-    //bubbleSort(sirala,sz);
-    //shellSort(sirala,sz);
-    //mergeSort(sirala,0,9);
-    //quickSort(sirala, 0, 9);
-    //heapSort(sirala, 10);
-    //radixSort(sirala,10);
+    insertionSort(sirala,sz);
+    bubbleSort(sirala,sz);
+    shellSort(sirala,sz);
+    mergeSort(sirala,0,sz1);
+    quickSort(sirala, 0, sz1);
+    heapSort(sirala, sz);
+    radixSort(sirala,sz);
 
 
     //Print sorted arrays
