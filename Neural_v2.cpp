@@ -288,75 +288,80 @@ int main() {
     quickSort(sirala5, 0, sz_1);
     heapSort(sirala6, sz6);
     radixSort(sirala7,sz7);
-
-       int sq = 274835;
-   int terra[sq];
-   for(int i=0;i<sq;i++)
-      terra[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   int sq1 = 274835;
-   int terra1[sq1];
-   for(int i=0;i<sq1;i++)
-      terra1[i]=rand()%165460;  //Generate number between 0 to 2147483645
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq2 = 274835;
-   int terra2[sq2];
-   for(int i=0;i<sq2;i++)
-      terra2[i]=rand()%165420;  //Generate number between 0 to 2147483645
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq3 = 27835;
-   int terra3[sq3];
-   for(int i=0;i<sq3;i++)
-      terra3[i]=rand()%165410;  //Generate number between 0 to 2147483645*/
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq4 = 274835;
-   int terra4[sq4];
-   for(int i=0;i<sq4;i++)
-      terra4[i]=rand()%145460;  //Generate number between 0 to 2147483645*/
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq5 = 24835;
-   int terra5[sq5];
-   for(int i=0;i<sq5;i++)
-      terra5[i]=rand()%164460;  //Generate number between 0 to 2147483645*/
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq6 = 24835;
-   int terra6[sq6];
-   for(int i=0;i<sq6;i++)
-      terra6[i]=rand()%165440;  //Generate number between 0 to 2147483645*/
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
     
-   int sq7 = 27835;
-   int terra7[sq7];
-   for(int i=0;i<sq7;i++)
-      terra7[i]=rand()%16546;  //Generate number between 0 to 2147483645*/
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
+    
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
 
-    //Print Dummy Array!
-    /*for (int k = 0; k < sq; ++k) {
-        cout << terra[k] << " ";
-    }
-    cout << "\n";*/
-
-
-
-    int sq_1 = sq - 1;
-    //Sort Functions:
-    selectionSort(terra,sq);
-    insertionSort(terra1,sq1);
-    bubbleSort(terra2,sq2);
-    shellSort(terra3,sq3);
-    mergeSort(terra4,0,sq_1);
-    quickSort(terra5, 0, sq_1);
-    heapSort(terra6, sq6);
-    radixSort(terra7,sq7);
-
-    selectionSort(terra,sq);
-    insertionSort(terra1,sq1);
-    bubbleSort(terra2,sq2);
-    shellSort(terra3,sq3);
-    mergeSort(terra4,0,sq_1);
-    quickSort(terra5, 0, sq_1);
-    heapSort(terra6, sq6);
-    radixSort(terra7,sq7);
-
+     
     
     //Print sorted arrays
     /*for (int j = 0; j < sz; ++j) {
