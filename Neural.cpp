@@ -240,6 +240,26 @@ int main() {
    int sirala3[sz3];
    for(int i=0;i<sz3;i++)
       sirala3[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
+    
+   int sz4 = 274835;
+   int sirala4[sz4];
+   for(int i=0;i<sz4;i++)
+      sirala4[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
+    
+   int sz5 = 274835;
+   int sirala5[sz5];
+   for(int i=0;i<sz5;i++)
+      sirala5[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
+    
+   int sz6 = 274835;
+   int sirala6[sz6];
+   for(int i=0;i<sz6;i++)
+      sirala6[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
+    
+   int sz7 = 274835;
+   int sirala7[sz7];
+   for(int i=0;i<sz7;i++)
+      sirala7[i]=rand()%165460;  //Generate number between 0 to 2147483645*/
 
     //Print Dummy Array!
     /*for (int k = 0; k < sz; ++k) {
@@ -255,10 +275,10 @@ int main() {
     insertionSort(sirala1,sz1);
     bubbleSort(sirala2,sz2);
     shellSort(sirala3,sz3);
-    mergeSort(sirala,0,sz_1);
-    quickSort(sirala, 0, sz_1);
-    heapSort(sirala, sz);
-    radixSort(sirala,sz);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz);
+    radixSort(sirala7,sz);
 
 
     //Print sorted arrays
