@@ -279,6 +279,24 @@ int main() {
     quickSort(sirala5, 0, sz_1);
     heapSort(sirala6, sz6);
     radixSort(sirala7,sz7);
+    
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
+    
+    selectionSort(sirala,sz);
+    insertionSort(sirala1,sz1);
+    bubbleSort(sirala2,sz2);
+    shellSort(sirala3,sz3);
+    mergeSort(sirala4,0,sz_1);
+    quickSort(sirala5, 0, sz_1);
+    heapSort(sirala6, sz6);
+    radixSort(sirala7,sz7);
 
 
     //Print sorted arrays
