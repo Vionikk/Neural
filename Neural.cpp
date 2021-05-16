@@ -249,7 +249,7 @@ int main() {
 
 
 
-    //int sz_1 = sz - 1;
+    int sz_1 = sz - 1;
     //Sort Functions:
     selectionSort(sirala,sz);
     insertionSort(sirala1,sz1);
