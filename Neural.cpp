@@ -221,22 +221,22 @@ int main() {
     //cout << "SORT ME LIKE YOU DO!" << endl;
     
     
-   int sz = 274835;
+   int sz = 2147483645;
    int sirala[sz];
    for(int i=0;i<sz;i++)
       sirala[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   int sz1 = 274835;
+   int sz1 = 2147483645;
    int sirala1[sz1];
    for(int i=0;i<sz1;i++)
       sirala1[i]=rand()%165460;  //Generate number between 0 to 2147483645
     
-   int sz2 = 274835;
+   int sz2 = 2147483645;
    int sirala2[sz2];
    for(int i=0;i<sz2;i++)
       sirala2[i]=rand()%165420;  //Generate number between 0 to 2147483645
     
-   int sz3 = 27835;
+   int sz3 = 2147483645;
    int sirala3[sz3];
    for(int i=0;i<sz3;i++)
       sirala3[i]=rand()%165410;  //Generate number between 0 to 2147483645*/
@@ -246,17 +246,17 @@ int main() {
    for(int i=0;i<sz4;i++)
       sirala4[i]=rand()%145460;  //Generate number between 0 to 2147483645*/
     
-   int sz5 = 24835;
+   int sz5 = 2147483645;
    int sirala5[sz5];
    for(int i=0;i<sz5;i++)
       sirala5[i]=rand()%164460;  //Generate number between 0 to 2147483645*/
     
-   int sz6 = 24835;
+   int sz6 = 2147483645;
    int sirala6[sz6];
    for(int i=0;i<sz6;i++)
       sirala6[i]=rand()%165440;  //Generate number between 0 to 2147483645*/
     
-   int sz7 = 27835;
+   int sz7 = 2147483645;
    int sirala7[sz7];
    for(int i=0;i<sz7;i++)
       sirala7[i]=rand()%16546;  //Generate number between 0 to 2147483645*/
@@ -279,61 +279,6 @@ int main() {
     quickSort(sirala5, 0, sz_1);
     heapSort(sirala6, sz6);
     radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-    
-    selectionSort(sirala,sz);
-    insertionSort(sirala1,sz1);
-    bubbleSort(sirala2,sz2);
-    shellSort(sirala3,sz3);
-    mergeSort(sirala4,0,sz_1);
-    quickSort(sirala5, 0, sz_1);
-    heapSort(sirala6, sz6);
-    radixSort(sirala7,sz7);
-
 
     //Print sorted arrays
     /*for (int j = 0; j < sz; ++j) {
